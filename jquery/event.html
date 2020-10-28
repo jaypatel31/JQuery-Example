@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery Example-4</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		#textBox{
+			width:250px;
+			height:150px;
+			border:3px ridge red;
+			background-image:linear-gradient(to right, #d53369 , #cbad6d);
+		}
+	</style>
+</head>
+<body>
+	<div id="textBox">
+		
+	</div>
+</body>
+<script>
+	let i=0;
+	$("document").ready(function(){
+		$('#textBox').on("click",clickEvent);
+		$('#textBox').on("mouseover",mouseOver);
+		
+		function clickEvent(){
+			i++;
+			$('#textBox').html("<h1>Clicked :"+i+"</h1>");
+		}
+		function mouseOver(){
+			$('#textBox').html("<h3>Mouse Over ME!!!</h3>")
+		}
+	});
+</script>
+</html>
