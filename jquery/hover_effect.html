@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery Example-6</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		#textBox{
+			border:3px ridge green;
+			padding:8px;
+			width:80%;
+			margin:auto;
+			margin-top:20px;
+			transition:0.5s ease-in-out;
+		}
+		.highlight{
+			
+			background-color: #111;
+			color:#f1f1f1;
+			cursor: pointer;
+			box-shadow: 2px 8px 20px black;
+		}
+	</style>
+</head>
+<body>
+	
+	<div id="textBox">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</body>
+<script>
+	$('body').css("font-size",'24px');
+	$("document").ready(function(){
+		
+		$('#textBox').hover(hoverEffect);
+		function hoverEffect(){
+			$(this).toggleClass('highlight');
+		}
+	});
+</script>
+</html>
