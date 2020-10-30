@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery Example-12</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		body{
+			background-color: black;
+		}
+		.textBox{
+			display: inline-block;
+			margin-top:20px;
+			border:2px solid green;
+			padding:8px;
+			width:3px;
+			height:3px;
+			margin-right:10px;
+			
+		}
+	</style>
+</head>
+<body>
+	<a id="play" href="#">Play</a><br/><br/>
+	<div class="textBox box_1">
+		
+	</div>
+	<div class="textBox box_2">
+		
+	</div>
+	<div class="textBox box_3">
+		
+	</div>
+	<div class="textBox box_4">
+		
+	</div>
+	<div class="textBox box_5">
+		
+	</div>
+	<div class="textBox box_6">
+		
+	</div>
+	<div class="textBox box_7">
+		
+	</div>
+</body>
+<script>
+	$('body').css("font-size",'24px');
+	$("document").ready(function(){
+		$('#play').click(play);
+		let i=0;
+			let Ca = Array();
+			Ca[0] = "#08F7FE";
+			Ca[1] = "#FE53BB";
+			Ca[2] = "#7122FA";
+			Ca[3] = "#FF2281";
+			Ca[4] = "#E8E500";
+		function play(){
+			if(i==Ca.length){
+				i=0;
+			}
+			
+			$('#play').css('color',`${Ca[i]}`)
+			$('.box_1').css('background-color',`${Ca[i]}`);
+			setTimeout(() => {	
+			  $('.box_2').css('background-color',`${Ca[i]}`);
+			}, 100)
+			setTimeout(() => {	
+			  $('.box_3').css('background-color',`${Ca[i]}`);
+			}, 200)
+			setTimeout(() => {
+			  $('.box_4').css('background-color',`${Ca[i]}`);
+			}, 300)
+			setTimeout(() => {
+			  $('.box_5').css('background-color',`${Ca[i]}`);  
+			}, 400)
+			setTimeout(() => {
+			  $('.box_6').css('background-color',`${Ca[i]}`);  
+			}, 500)
+			setTimeout(() => {
+			  $('.box_7').css('background-color',`${Ca[i]}`);
+			}, 600)
+			setTimeout(() => {
+				i++;
+			  	play();
+			}, 800)
+		};
+	});
+</script>
+</html>

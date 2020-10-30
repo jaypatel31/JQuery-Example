@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery SLider</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		img{
+			width:100%;
+		}
+	</style>
+</head>
+<body>
+	<a id="slide_start" href="#">Start Slide Show</a> 
+	<div id="img_container">
+		<img class="img-1" src="https://www.w3schools.com/howto/img_nature_wide.jpg" alt="slide-1">
+		<img class="img-2" src="https://www.w3schools.com/howto/img_snow_wide.jpg" alt="slide-2">
+		<img class="img-3" src="https://www.w3schools.com/howto/img_lights_wide.jpg" alt="slide-3">
+	</div>
+	
+</body>
+<script>
+	$('img').hide();
+	var i = 1;
+	$('body').css("font-size",'24px');
+	$("document").ready(function(){
+		$('#slide_start').click(slideShow);
+		function slideShow() {
+			if(i==4){
+				i=1;
+			};
+			$('.img-'+i).fadeIn(2000, function() {
+				setTimeout(() => {
+					$('.img-'+i).fadeOut(2000, function() {
+						i++;
+						slideShow();
+					});
+				}, 2000) 
+			});
+		}
+	});
+</script>
+</html>

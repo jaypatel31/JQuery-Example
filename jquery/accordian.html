@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery Example-8</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		.acc{
+			display:none;
+			margin-top:20px;
+			border:2px solid green;
+			padding:8px;
+		}
+		.acc_btn{
+			padding:8px;
+			margin-top: 15px;
+			display:inline-block;
+		}
+	</style>
+</head>
+<body>
+	<a id="acc-1" class="acc_btn" href="#">Accordian-1</a>
+	<div class="acc-1 acc">
+		Lorem-1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div><br>
+	<a id="acc-2" class="acc_btn" href="#">Accordian-2</a>
+	<div class="acc-2 acc">
+		Lorem-1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div><br>
+	<a id="acc-3" class="acc_btn" href="#">Accordian-3</a>
+	<div class="acc-3 acc">
+		Lorem-1 ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div><br>
+</body>
+<script>
+	$('body').css("font-size",'24px');
+	$("document").ready(function(){
+		$('.acc_btn').click(function(event) {
+			let id = event.target.id;
+			$('.acc').hide();
+			$('.'+id).slideToggle(500,"linear", function() {
+				
+			});
+			
+		});
+	});
+</script>
+</html>

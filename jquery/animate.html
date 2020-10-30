@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Jquery Example-10</title>
+	<script src="./js/jquery.js"></script>
+	<style>
+		#textBox{
+			
+			margin-top:20px;
+			border:2px solid green;
+			padding:8px;
+			width:500px;
+			
+		}
+	</style>
+</head>
+<body>
+	<a id="large" href="#">Large</a> | <a id="move" href="#">Move</a> | <a id="combine" href="#">All togethor</a> | <a id="close" href="#">Toggle</a>
+	<div id="textBox">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	</div>
+</body>
+<script>
+	$('body').css("font-size",'24px');
+	$("document").ready(function(){
+		$('#large').click(function(){
+			$('#textBox').animate({width: "900px"},1000);
+		});
+		$('#move').click(function(){
+			$('#textBox').animate({marginLeft: "100px"}, 1000)
+		});
+		$('#combine').click(function(){
+			$('#textBox').animate({width: "900px" , marginLeft: "100px"}, 1000)
+		});
+		$('#close').click(function(){
+			$('#textBox').animate({height: "toggle"}, 1000)
+		});
+		
+	});
+</script>
+</html>
